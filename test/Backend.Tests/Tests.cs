@@ -28,7 +28,7 @@ namespace Backend.UnitTests
             repo.Setup(r => r.GetAll()).Returns(new Contact[] { contact });
             var controller = GetInstance(repo.Object);
             var result = controller.GetAll();
-            Assert.Equal(result.First().Name, contact.Name);
+            Assert.Equal(result.Single().Name, contact.Name);
         }
     }
 }
