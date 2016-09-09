@@ -11,7 +11,7 @@ namespace Backend.Models
 
         public ContactRepository()
         {
-            Add(new Contact { Name = "Q" });
+            // Add(new Contact { Name = "Q" });
         }
 
         public IEnumerable<Contact> GetAll()

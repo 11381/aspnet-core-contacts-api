@@ -46,10 +46,17 @@ namespace Backend
         // }
         public void Configure(IApplicationBuilder app)
         {
-            app.Run(context =>
+            app.UseMvc();
+
+            app.Use(async (context, next) =>
             {
-                return context.Response.WriteAsync("Hello from ASP.NET Core!");
+                await context.Response.WriteAsync("Hello world!");
             });
+            
+            // app.Run(context =>
+            // {
+            //     return context.Response.WriteAsync("Hello from ASP.NET Core!");
+            // });
         }
 
         public void ConfigureServices(IServiceCollection services)
