@@ -9,7 +9,10 @@
     "dotnet-test-xunit": "1.0.0-rc2-192208-24",
     "Backend": {
     	"target": "project"
-    }
+    },
+    "Moq": "4.6.25-alpha",
+    "Newtonsoft.Json": "9.0.1",
+    "System.Diagnostics.TraceSource": "4.0.0"
   },
   "testRunner": "xunit",
   "frameworks": {
