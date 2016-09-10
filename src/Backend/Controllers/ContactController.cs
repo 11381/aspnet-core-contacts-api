@@ -60,26 +60,6 @@ namespace Backend.Controllers
             return new NoContentResult();
         }
 
-        [HttpPatch("{id}")]
-        public IActionResult Update([FromBody] Contact contact, string id)
-        {
-            if (contact == null)
-            {
-                return BadRequest();
-            }
-
-            var existing = Contacts.Find(id);
-            if (existing == null)
-            {
-                return NotFound();
-            }
-
-            contact.Id = existing.Id;
-
-            Contacts.Update(contact);
-            return new NoContentResult();
-        }
-
         [HttpDelete("{id}")]
         public IActionResult Delete(string id)
         {
