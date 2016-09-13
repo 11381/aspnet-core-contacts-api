@@ -16,7 +16,7 @@ namespace Backend.UnitTests
 
         Contact createDummyContact(){
             return new Contact(){
-                Name = "Q"
+                FirstName = "Q"
             };
         }
 
